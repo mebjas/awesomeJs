@@ -1,6 +1,8 @@
 Smoothscroll js library
 ===============================================
 
+![Dependency](http://img.shields.io/badge/dependencies-jQuery-brightgreen.svg)
+
 Adding this file to HTML script converts every internal links page movement to smooth transition
 <pre>
 	Anchor tags:
