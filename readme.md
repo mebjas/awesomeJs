@@ -5,4 +5,4 @@ This repository is a collection of js libraries / jQuery plugins that can be use
 
 List
 ===========================
-1. **Smoothscroll:** awesomeJs.smoothscroll.js
+1. **Smoothscroll:** `awesomeJs.smoothscroll.js`
