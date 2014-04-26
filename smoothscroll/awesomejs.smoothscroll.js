@@ -14,8 +14,8 @@ $(document).ready(function() {
 
 			//take document scroll to this position
 			$('html,body').animate({
-	        scrollTop: $("a[name='" +$(this).attr("href").replace("#", "") +"']").offset().top},
-	        1000);
+				scrollTop: $("a[name='" +$(this).attr("href").replace("#", "") +"']").offset().top},
+				1000);
 		}
 	});
 });
