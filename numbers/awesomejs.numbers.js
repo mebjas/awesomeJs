@@ -1,39 +1,8 @@
 /**
- * AwesomeJS: Collection of several awesome javascript funcitons
- * Dependence: jQuery library
- */
-
-
-/**
- * awesomeJs.smoothScroll.js
- * converts any internal anchor tag, to source of smooth js transition.
- * just include this script in your page & it will automatically add
- * the mentioned feature.
- */
-
-(function( $ ) {
-	$.fn.smoothscroll = function(options)
-	{
-		// Apply this for each item
-		$("a").click(function(event) {
-            if ($(this).attr("href").substr(0, 1) === "#") {
-
-                //prevent the default action
-                event.preventDefault();
-
-                //take document scroll to this position
-                $('html,body').animate({
-                    scrollTop: $("a[name='" +$(this).attr("href").replace("#", "") +"']").offset().top},
-                    1000);
-            }
-        });
-	}
-}( jQuery ));
-
-/**
  * awesomeJs.large_no.js
- * Convert any large no like 9846387568375 to 9,846,387,568,375
+ * Convert any large no like 9846387568375 to 9,846,387,568,375 (Arabic) or to Vedic
  * just include this script in your page & call with appropriate object
+ * Dependency: jQuery library
  */
 
 (function( $ ) {

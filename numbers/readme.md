@@ -9,11 +9,14 @@ This library allows you to turn any large number into number in `Vedic` or `Arab
 	78346283762834 => 7,83,46,28,37,62,834 (Vedic / Indian)
 ```
 
-##how_to_add: include the js file `awesomejs.large_no.js`
+##how_to_add: include the js file `awesomejs.numbers.js`
 ```js
 <span class="large_no">78346283762834</span>
 <script src="js/awesomeJs.smoothscroll.js"></script>
 <script>
-    $(".large_no").largeNo();
+    $(".large_no").toArabic();
+    // or you can call
+    $(".large_no").toVedic();
+    // for vedic number system
 </script>
 ```
