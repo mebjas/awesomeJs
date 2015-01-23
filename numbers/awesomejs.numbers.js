@@ -3,6 +3,7 @@
  * Convert any large no like 9846387568375 to 9,846,387,568,375 (Arabic) or to Vedic
  * just include this script in your page & call with appropriate object
  * Dependency: jQuery library
+ * Author: Minhaz <minhazav@gmail.com>
  */
 
 (function( $ ) {

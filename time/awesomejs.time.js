@@ -1,13 +1,14 @@
 /**
  * awesomeJs.time.js
  * convert timestamps to date formats
+ * Author: Minhaz <minhazav@gmail.com>
  */
 
 (function( $ ) {
 	$.fn.toPrettyDate = function(format)
 	{
-		if (typeof format != "undefined" && format.length != 0)
-			$.fn.toArabic.format = format;
+		if (typeof format == "undefined")
+			format = $.fn.toPrettyDate.format;
 
 		$(this).each(function() {
 			var timestamp = $(this).html();
@@ -79,7 +80,12 @@
 	}
 	$.fn.toPrettyDate.format = "D, d M'y";
 
-	$.fn.toRelativeDate = function() {
+	$.fn.toRelativeDate = function(animate) {
+		if (typeof animate != "undefined") {
+			if (animate != true)
+				animate = false;
+		} else animate = false;
+
 		$(this).each(function() {
 			var timestamp = $(this).html();
 			timestamp.trim();
@@ -88,13 +94,42 @@
 				return;
 			}
 
+			var hash = 'awesome' +Math.floor(Math.random()*1000);
+			$(this).attr('hash', hash);
+
 			timestamp = parseInt(timestamp);
+			if (timestamp < 999999999999)
+				timestamp *= 1000;
 
-			var t = new Date().getTime() / 1000;
-			var diff = t - timestamp;
+			var t = new Date().getTime();
+			var diff = (t - timestamp) / 1000;
 
-			if (diff < 60) $(this).html(' ' +Math.round(diff) +'s ago');
-			else if (diff / 60 < 60) $(this).html(' ' +Math.round(diff/60) +'m ago');
+			var $this = this;
+
+			if (diff < 60) {
+				$(this).html(' ' +Math.round(diff) +'s ago');
+				if (animate) {
+					var t = setTimeout(function() {
+						if ($($this).attr('hash') != hash)
+							return;
+						timestamp += 1;
+						$($this).html(timestamp);
+						$($this).toRelativeDate(true);
+					}, 1000);
+				}
+			}
+			else if (diff / 60 < 60) {
+				$(this).html(' ' +Math.round(diff/60) +'m ago');
+				if (animate) {
+					var t = setTimeout(function() {
+						if ($($this).attr('hash') != hash)
+							return;
+						timestamp += 60;
+						$($this).html(timestamp);
+						$($this).toRelativeDate(true);
+					}, 60*1000);
+				}
+			}
 			else if (diff / 3600 < 24) $(this).html(' ' +Math.round(diff/3600) +'h ago');
 			else if (diff / 86400 < 10) $(this).html(' ' +Math.round(diff/86400) +'d ago');
 			else {
@@ -102,8 +137,7 @@
 				$(this).prepend(' on ');
 			}
 
-			// @todo - it should start running time also
-			// based on configuration
+
 		});
 	};
 }( jQuery ));

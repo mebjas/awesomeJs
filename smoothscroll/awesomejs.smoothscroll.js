@@ -4,6 +4,7 @@
  * just include this script in your page & it will automatically add
  * the mentioned feature.
  * Dependency: jQuery library
+ * Author: Minhaz <minhazav@gmail.com>
  */
 
 (function( $ ) {

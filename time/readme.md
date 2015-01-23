@@ -24,7 +24,11 @@ you can use this library to create automatic clock showing `1s ago` -> `2s ago` 
 <script src="js/awesomeJs.time.js"></script>
 <script>
     $(".timestamp1").toRelativeDate();
-    // or you can call
+    // ^ Converts a timestamp to relative date like 2s ago
+    
+    $(".timestamp1").toRelativeDate(true);
+    // ^^ Makes sure relative time changes with time 
+
     $(".timestamp2").toPrettyDate("D d^ M 20y");
     // for vedic number system
 </script>
