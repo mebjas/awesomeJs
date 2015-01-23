@@ -1,4 +1,4 @@
-large_no js library
+number js library
 ===============================================
 
 ![Dependency](http://img.shields.io/badge/dependencies-jQuery-brightgreen.svg) &nbsp;&nbsp;	[![Code Climate](https://codeclimate.com/github/mebjas/awesomeJs.png)](https://codeclimate.com/github/mebjas/awesomeJs)

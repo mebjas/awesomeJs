@@ -9,6 +9,9 @@ This repository is a collection of js libraries / jQuery plugins that can be use
 2. **Numbers:** `awesomeJs.numbers.js`
     - `$(identifier).toVedic()`
     - `$(identifier).toArabic()`
+3. **Time:** `awesomeJs.time.js`
+	- `$(identifier).toRelativeDate()`
+    - `$(identifier).toPrettyDate(<date format>)`
 
 
 ##License
