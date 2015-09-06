@@ -1,4 +1,4 @@
-AwesomeJs library [![Todo CI](https://test-tci.rhcloud.com/b/mebjas/awesomeJs)](https://test-tci.rhcloud.com/r/mebjas/awesomeJs)
+AwesomeJs library [![Todofy](https://todofy.org/b/mebjas/awesomeJs)](https://todofy.org/r/mebjas/awesomeJs)
 ============================
 
 This repository is a collection of js libraries / jQuery plugins that can be used in websites / web application to make them awesome.
